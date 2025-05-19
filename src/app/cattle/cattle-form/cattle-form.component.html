@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <h3 class="mb-4 text-center">Add New Cattle</h3>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="mb-3">
+      <label for="breed" class="form-label">Breed</label>
+      <input type="text" class="form-control" formControlName="breed" />
+    </div>
+
+    <div class="mb-3">
+      <label for="weight" class="form-label">Weight (kg)</label>
+      <input type="number" class="form-control" formControlName="weight" />
+    </div>
+
+    <div class="mb-3">
+      <label for="price" class="form-label">Price ($)</label>
+      <input type="number" class="form-control" formControlName="price" />
+    </div>
+
+    <div class="form-check mb-3">
+      <input type="checkbox" class="form-check-input" id="available" formControlName="available" />
+      <label class="form-check-label" for="available">Available</label>
+    </div>
+
+    <button class="btn btn-primary w-100" [disabled]="form.invalid">Add Cattle</button>
+  </form>
+</div>
