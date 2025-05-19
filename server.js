@@ -7,6 +7,16 @@ const routes = require('./routes.json');
 server.use(middlewares);
 server.use(jsonServer.bodyParser); // ✅ required for req.body
 
+// server.js
+const jsonServer = require('json-server');
+const port = process.env.PORT || 3000;
+
+server.use(middlewares);
+server.use(router);
+
+server.listen(port, () => {
+  console.log(`JSON Server is running on port ${port}`);
+});
 // ✅ Fixed login route using req.body
 server.post('/auth/login', (req, res) => {
   const { username, password } = req.body;
