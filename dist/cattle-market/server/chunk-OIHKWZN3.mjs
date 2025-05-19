@@ -1,0 +1,2 @@
+import './polyfills.server.mjs';
+import{La as o,g as a,j as i}from"./chunk-LVVL72GJ.mjs";var l={production:!1,apiUrl:"http://localhost:3000"};var p=class e{constructor(t){this.http=t}apiUrl=`${l.apiUrl}/cattle`;getCattle(){return this.http.get(this.apiUrl)}updateCattleAvailability(t,r){return this.http.patch(`${this.apiUrl}/${t}`,{available:r})}addCattle(t){return this.http.post(this.apiUrl,t)}static \u0275fac=function(r){return new(r||e)(i(o))};static \u0275prov=a({token:e,factory:e.\u0275fac,providedIn:"root"})};export{p as a};
